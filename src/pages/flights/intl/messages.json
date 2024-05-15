@@ -1,3 +1,4 @@
 {
-  "title": "Flights"
+  "title": "Flights",
+  "fetchError": "There was an error fetching the data"
 }

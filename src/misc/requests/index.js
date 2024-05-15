@@ -14,14 +14,15 @@ const addAxiosInterceptors = ({
 }) => {
   axios.interceptors.response.use(
     (response) => response.data,
-    (error) => {
-      if (error.response.data
-        .some(beError => beError?.code === 'INVALID_TOKEN')
-      ) {
-        onSignOut();
-      }
-      throw error.response.data;
-    }
+    // TODO when auth service is ready to handle token invalidation adjust this code, adjust error handling there to not block other api errors like it does now
+    // (error) => {
+    //   if (error.response.data
+    //     .some(beError => beError?.code === 'INVALID_TOKEN')
+    //   ) {
+    //     onSignOut();
+    //   }
+    //   throw error.response.data;
+    // }
   );
 };
 
