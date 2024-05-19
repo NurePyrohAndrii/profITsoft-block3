@@ -1,4 +1,21 @@
 {
   "title": "Рейси",
-  "fetchError": "Помилка завантаження даних"
+  "fetchError": "Помилка завантаження даних",
+  "flightNumberText": "Номер рейсу",
+  "departureAirportText": "Аеропорт відправлення",
+  "arrivalAirportText": "Аеропорт прибуття",
+  "departureTimeText": "Час відправлення",
+  "arrivalTimeText": "Час прибуття",
+  "dialogDeleteTitle": "Підтвердження видалення",
+  "dialogDeleteMessageNumber": "Ви впевнені, що хочете видалити рейс № ",
+  "dialogDeleteMessageDepartureTime": ", що відправляється ",
+  "dialogDeleteMessageArrivalTime": " і прибуває ",
+  "confirmDeletingText": "Так",
+  "cancelDeletingText": "Ні",
+  "deleteSuccessMessage": "Рейс успішно видалено",
+  "filterServicesText": "Виберіть сервіси",
+  "applyFilterText": "Застосувати",
+  "deleteError": "Помилка видалення рейсу",
+  "forExampleText": "напр. ",
+  "rowsPerPageText": "Рядків на сторінці"
 }

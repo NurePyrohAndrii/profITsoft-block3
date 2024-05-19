@@ -12,6 +12,7 @@ const colorVariants = {
 const inputTypes = {
   password: 'password',
   text: 'text',
+  datetime_local: 'datetime-local',
 };
 
 const REQUIRED_CHAR = '*';
@@ -32,6 +33,7 @@ const TextField = ({
   onSelect,
   required = false,
   value,
+  defaultValue
 }) => {
   const { theme } = useTheme();
   const [ state, setState ] = useState({
@@ -85,6 +87,7 @@ const TextField = ({
         isFocused: true,
       })}
       onSelect={onSelect}
+      defaultValue={defaultValue}
       sx={{
         '& .MuiInputBase-root:before': {
           display: 'none',

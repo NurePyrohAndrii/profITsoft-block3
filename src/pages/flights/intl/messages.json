@@ -1,4 +1,21 @@
 {
   "title": "Flights",
-  "fetchError": "There was an error fetching the data"
+  "fetchError": "There was an error fetching the data",
+  "flightNumberText": "Flight number",
+  "departureAirportText": "Departure airport",
+  "arrivalAirportText": "Arrival airport",
+  "departureTimeText": "Departure time",
+  "arrivalTimeText": "Arrival time",
+  "dialogDeleteTitle": "Confirm delete",
+  "dialogDeleteMessageNumber": "Are you sure you want to delete the flight # ",
+  "dialogDeleteMessageDepartureTime": " with departure time ",
+  "dialogDeleteMessageArrivalTime": " and arrival time ",
+  "confirmDeletingText": "Yes",
+  "cancelDeletingText": "No",
+  "deleteSuccessMessage": "Flight deleted successfully",
+  "filterServicesText": "Select services",
+  "applyFilterText": "Apply",
+  "deleteError": "There was an error deleting the flight",
+  "forExampleText": "e.g. ",
+  "rowsPerPageText": "Rows per page"
 }

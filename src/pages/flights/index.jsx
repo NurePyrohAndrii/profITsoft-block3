@@ -1,14 +1,14 @@
 import React, {useMemo} from 'react';
 import IntlProvider from 'misc/providers/IntlProvider';
 import useLocationSearch from 'misc/hooks/useLocationSearch';
+import {Provider} from "react-redux";
 
 import getMessages from './intl';
 import Flights from './containers/Flights';
-import {Provider} from "react-redux";
-import flightReducer from "./reducers"
+import reducer from "./reducers"
 import configureStore from "../../misc/redux/configureStore";
 
-const store = configureStore(flightReducer);
+const store = configureStore(reducer);
 function Index(props) {
     const {
         lang,

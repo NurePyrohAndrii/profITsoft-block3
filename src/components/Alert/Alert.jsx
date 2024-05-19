@@ -1,4 +1,4 @@
-import {Alert} from "@mui/material";
+import AlertMUI from "@mui/material/Alert";
 
 const variants = {
     filled: 'filled',
@@ -18,12 +18,12 @@ function CustomAlert({
                    children
 }) {
     return (
-        <Alert
+        <AlertMUI
             severity={severity}
             variant={variant}
         >
             {children}
-        </Alert>
+        </AlertMUI>
     )
 }
 

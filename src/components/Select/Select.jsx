@@ -23,6 +23,7 @@ const Select = ({
   size = sizes.medium,
   value,
   variant = variants.standard,
+  error = false,
 }) => {
   return (
     <SelectMui
@@ -46,6 +47,7 @@ const Select = ({
       size={size}
       value={value}
       variant={variant}
+      error={error}
     >
       {children}
     </SelectMui>

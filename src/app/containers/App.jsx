@@ -26,6 +26,7 @@ import IntlProvider from '../components/IntlProvider';
 import MissedPage from '../components/MissedPage';
 import SearchParamsConfigurator from '../components/SearchParamsConfigurator';
 import Flights from "../../pageProviders/Flights";
+import FlightDetails from "../../pageProviders/FlightDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -83,6 +84,10 @@ function App() {
                     <Route
                         element={<Flights />}
                         path={`${pageURLs[pages.flights]}`}
+                    />
+                    <Route
+                        element={<FlightDetails />}
+                        path={`${pageURLs[pages.flightDetails]}`}
                     />
                     <Route
                       element={(
