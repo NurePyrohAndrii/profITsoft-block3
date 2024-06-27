@@ -1,0 +1,19 @@
+{
+  "titleView": "Деталі рейсу",
+  "titleCreate": "Створення рейсу",
+  "flightNumberText": "Номер рейсу",
+  "departureAirportText": "Аеропорт відправлення",
+  "arrivalAirportText": "Аеропорт прибуття",
+  "departureTimeText": "Час відправлення",
+  "arrivalTimeText": "Час прибуття",
+  "servicesText": "Сервіси",
+  "airportCodeCaption": "Код",
+  "airportNameCaption": "Назва",
+  "airportLocationTimezoneCaption": "Місто, країна, часовий пояс",
+  "flightNumberHelperText": "Введіть номер рейсу",
+  "departureTimeHelperText": "Введіть час відправлення",
+  "arrivalTimeHelperText": "Введіть час прибуття",
+  "editSuccessText": "Рейс успішно збережено",
+  "editFailureText": "Помилка при редагуванні рейсу",
+  "createSuccessText": "Рейс успішно створено"
+}

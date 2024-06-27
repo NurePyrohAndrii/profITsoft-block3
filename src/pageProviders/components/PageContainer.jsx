@@ -30,7 +30,7 @@ const getClasses = createUseStyles((theme) => ({
     maxWidth: '100% !important',
   },
   innerContent: {
-    height: '100%',
+    height: '100hv',
     padding: `${theme.spacing(2)}px`,
   },
   sideBarStub: {

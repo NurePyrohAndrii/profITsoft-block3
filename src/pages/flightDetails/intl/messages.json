@@ -1,0 +1,19 @@
+{
+  "titleView": "Flight details",
+  "titleCreate": "Add flight",
+  "flightNumberText": "Flight number",
+  "departureAirportText": "Departure airport",
+  "arrivalAirportText": "Arrival airport",
+  "departureTimeText": "Departure time",
+  "arrivalTimeText": "Arrival time",
+  "servicesText": "Services",
+  "airportCodeCaption": "Code",
+  "airportNameCaption": "Name",
+  "airportLocationTimezoneCaption": "Location/Timezone",
+  "flightNumberHelperText": "Enter flight number",
+  "departureTimeHelperText": "Enter departure time",
+  "arrivalTimeHelperText": "Enter arrival time",
+  "editSuccessText": "Flight details updated successfully",
+  "editFailureText": "Flight details update failed",
+  "createSuccessText": "Flight added successfully"
+}
