@@ -23,9 +23,9 @@ const errorAirports = errors => ({
 
 const getAirports = () => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
-    return axios.get(`${FLIGHTS_SERVICE}/airports`)
+    return axios.get(`${FLIGHTS_URL}/airports`)
 }
 
 const fetchAirports = () => (dispatch) => {

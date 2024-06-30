@@ -56,9 +56,9 @@ const createFlightDetailsError = errors => ({
 
 const getFlightDetails = (id) => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
-    return axios.get(`${FLIGHTS_SERVICE}/flights/${id}`)
+    return axios.get(`${FLIGHTS_URL}/flights/${id}`)
 }
 
 const fetchFlightDetails = (id) => {
@@ -76,9 +76,9 @@ const fetchFlightDetails = (id) => {
 
 const requestEditFlightDetails = (id, data) => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
-    return axios.put(`${FLIGHTS_SERVICE}/flights/${id}`, data);
+    return axios.put(`${FLIGHTS_URL}/flights/${id}`, data);
 }
 
 const editFlightDetails = (id, data) => {
@@ -97,9 +97,9 @@ const editFlightDetails = (id, data) => {
 
 const requestCreateFlightDetails = (data) => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
-    return axios.post(`${FLIGHTS_SERVICE}/flights`, data);
+    return axios.post(`${FLIGHTS_URL}/flights`, data);
 }
 
 const createFlight = (data) => {

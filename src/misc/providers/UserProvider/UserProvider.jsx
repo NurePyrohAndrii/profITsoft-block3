@@ -11,10 +11,7 @@ const UserProvider = ({
     <UserContext.Provider
       value={{
         email: user.email,
-        firstName: user.firstName,
-        id: user.id,
-        lastName: user.lastName,
-        login: user.login,
+        name: user.name,
       }}
     >
       {children}

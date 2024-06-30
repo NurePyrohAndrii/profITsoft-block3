@@ -4,10 +4,7 @@ import { UserContext } from 'misc/providers/UserProvider';
 /**
 @return {
   email,
-  firstName,
-  id,
-  lastName,
-  login,
+  name
 }
 **/
 

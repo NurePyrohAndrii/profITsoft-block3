@@ -1,32 +1,40 @@
 import {useIntl} from 'react-intl';
 import React, {useEffect, useState} from 'react';
-import Typography from 'components/Typography';
+
 import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from 'react-router-dom';
+import {createUseStyles} from "react-jss";
+
 import actionsFlights from "../actions/flights";
 import actionsServices from "../actions/services";
-import Alert from "components/Alert";
-import {createUseStyles} from "react-jss";
-import useTheme from "../../../misc/hooks/useTheme";
-import Loading from "../../../components/Loading";
-import PageContainer from "../../../pageProviders/components/PageContainer";
-import Card from "../../../components/Card";
-import CardTitle from "../../../components/CardTitle";
-import CardContent from "../../../components/CardContent";
-import Trash from "../../../components/icons/Trash";
-import IconButton from "../../../components/IconButton";
-import Dialog from "../../../components/Dialog";
-import Button from "../../../components/Button";
-import Snackbar from "../../../components/Snackbar";
-import Add from "../../../components/icons/Add";
-import Filter from "../../../components/icons/Filter";
-import {useNavigate} from 'react-router-dom';
-import Select from "../../../components/Select";
-import TextField from "../../../components/TextField";
-import MenuItem from "../../../components/MenuItem";
-import Checkbox from "../../../components/Checkbox";
-import InputLabel from "../../../components/InputLabel";
-import TablePagination from "../../../components/TablePagination";
+
+import useTheme from "misc/hooks/useTheme";
 import storage from "misc/storage";
+import pagesURLs from "constants/pagesURLs";
+import { flightDetails } from "constants/pages";
+
+import PageContainer from "pageProviders/components/PageContainer";
+
+import Typography from 'components/Typography';
+import Alert from "components/Alert";
+import Loading from "components/Loading";
+import Card from "components/Card";
+import CardTitle from "components/CardTitle";
+import CardContent from "components/CardContent";
+import Trash from "components/icons/Trash";
+import IconButton from "components/IconButton";
+import Dialog from "components/Dialog";
+import Button from "components/Button";
+import Snackbar from "components/Snackbar";
+import Add from "components/icons/Add";
+import Filter from "components/icons/Filter";
+import Select from "components/Select";
+import TextField from "components/TextField";
+import MenuItem from "components/MenuItem";
+import Checkbox from "components/Checkbox";
+import InputLabel from "components/InputLabel";
+import TablePagination from "components/TablePagination";
+
 
 const getClasses = createUseStyles((theme) => ({
     item: {
@@ -174,7 +182,7 @@ function Flights() {
     };
 
     const navigateToDetails = (flightId) => {
-        navigate(`/flight-details/${flightId}`);
+        navigate(`${pagesURLs[flightDetails].replace(':id', flightId)}`);
     };
 
     const handleServicesChange = (event) => {
@@ -236,7 +244,7 @@ function Flights() {
                                     arrivalAirport: target.value,
                                 })
                             }
-                            label={formatMessage({id: 'forExampleText'}) + 'JFK'}
+                            label={formatMessage({id: 'forExampleText'}) + 'LAX'}
                         />
                     </div>
                     <div className={classes.rowItemContent}>

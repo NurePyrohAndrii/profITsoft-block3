@@ -1,7 +1,7 @@
 import React, {
   createContext,
 } from 'react';
-import { useSelector } from 'react-redux';
+import {useSelector} from "react-redux";
 
 export const AuthoritiesContext = createContext([]);
 
@@ -9,10 +9,10 @@ const AuthoritiesProvider = ({
   children,
 }) => {
   const {
-    authorities,
+    authority,
   } = useSelector(({ user }) => user);
   return (
-    <AuthoritiesContext.Provider value={authorities}>
+    <AuthoritiesContext.Provider value={authority}>
       {children}
     </AuthoritiesContext.Provider>
   );

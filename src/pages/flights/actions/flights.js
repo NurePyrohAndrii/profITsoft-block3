@@ -9,7 +9,6 @@ import {
     DELETE_FLIGHT_ERROR
 } from "../constants/actionTypes";
 
-
 const receiveFlights = (flights, page, size, totalPages, totalElements) => ({
     type: FETCH_FLIGHTS_SUCCESS,
     payload: flights,
@@ -50,10 +49,10 @@ const getFlights = ({
     size,
 }) => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
     return axios.post(
-        `${FLIGHTS_SERVICE}/flights/_list`,
+        `${FLIGHTS_URL}/flights/_list`,
         {
             departureAirport,
             arrivalAirport,
@@ -66,9 +65,9 @@ const getFlights = ({
 
 const performDeleteFlight = (id) => {
     const {
-        FLIGHTS_SERVICE,
+        FLIGHTS_URL,
     } = config;
-    return axios.delete(`${FLIGHTS_SERVICE}/flights/${id}`);
+    return axios.delete(`${FLIGHTS_URL}/flights/${id}`);
 }
 
 const fetchFlights = ({

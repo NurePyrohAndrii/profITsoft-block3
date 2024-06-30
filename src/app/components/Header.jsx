@@ -2,7 +2,6 @@ import React, { useMemo, useRef, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
-import Button from 'components/Button';
 import Hover from 'components/Hover';
 import IconButton from 'components/IconButton';
 import IconGlobus from 'components/icons/Globus';
@@ -103,7 +102,7 @@ function Header({
     isUserMenuOpened: false,
   });
 
-  const userName = user.firstName || user.login;
+  const userName = user.name
 
   const actualOrderedRightPanelItemTypes = useMemo(() => {
     const result = [];
@@ -130,11 +129,6 @@ function Header({
       <div className={classes.content}>
         <div className={classes.toolBarContainerLeft}>
           <LeftNavBar />
-          <Link
-            to={{
-              pathname: `${pagesURLs[pages.defaultPage]}`,
-            }}
-          >
             <Hover
               light
               selected={currentPage === pages.defaultPage}
@@ -143,7 +137,6 @@ function Header({
                 <Logo compact={isMobile} />
               </div>
             </Hover>
-          </Link>
         </div>
         <div className={classes.toolBarContainerRight}>
           {actualOrderedRightPanelItemTypes.map((itemType) => (
@@ -181,27 +174,6 @@ function Header({
                   </Hover>
                 </div>
               )}
-              {itemType === rightPanelItemTypes.LOGIN && (
-                <Link
-                  to={{
-                    pathname: `${pagesURLs[pages.login]}`,
-                  }}
-                >
-                  <Button
-                    colorVariant="header"
-                    variant="text"
-                  >
-                    <Typography
-                      color="inherit"
-                      variant="subtitle"
-                    >
-                      <strong>
-                        {formatMessage({ id: 'signIn' })}
-                      </strong>
-                    </Typography>
-                  </Button>
-                </Link>
-              )}
               {itemType === rightPanelItemTypes.LANGUAGE && (
                 <>
                   <div className={classes.selectedLang}>
@@ -230,16 +202,6 @@ function Header({
                     </IconButton>
                   </div>
                 </>
-              )}
-              {itemType === rightPanelItemTypes.SEPARATOR && (
-                <Typography
-                  color="paper"
-                  variant="subtitle"
-                >
-                  <strong>
-                    |
-                  </strong>
-                </Typography>
               )}
             </>
           ))}
@@ -275,28 +237,6 @@ function Header({
               </Typography>
             </MenuItem>
           ))}
-        </Menu>
-        <Menu
-          anchorEl={userMenuRef.current}
-          open={state.isUserMenuOpened}
-          onClose={() => setState({
-            ...state,
-            isUserMenuOpened: false,
-          })}
-        >
-          <MenuItem
-            onClick={() => {
-              setState({
-                ...state,
-                isUserMenuOpened: false,
-              });
-              onLogout();
-            }}
-          >
-            <Typography>
-              {formatMessage({ id: 'signOut' })}
-            </Typography>
-          </MenuItem>
         </Menu>
       </div>
     </div>

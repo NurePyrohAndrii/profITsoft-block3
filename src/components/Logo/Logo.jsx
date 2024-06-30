@@ -39,13 +39,13 @@ function Logo({
   const classes = getClasses({ theme });
   return (
     <div className={classes.container}>
-      {!compact && (
-        <IconHome color="header"/>
-      )}
+      {/*{!compact && (*/}
+      {/*  <IconHome color="header"/>*/}
+      {/*)}*/}
       {!compact && (
         <div className={classes.label}>
           <strong>
-            UI app. Base
+            Flight Star
           </strong>
         </div>
       )}

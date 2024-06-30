@@ -1,33 +1,31 @@
 import axios from 'axios';
-import storage, { keys } from '../storage';
+import pagesURLs from "../../constants/pagesURLs";
+import {defaultPage} from "../../constants/pages";
+import {useNavigate} from "react-router-dom";
 
 axios.interceptors.request.use((params) => {
-  const token = storage.getItem(keys.TOKEN);
-  if (token) {
-    params.headers.setAuthorization(`Bearer ${token}`);
-  }
-  return params;
+    params.withCredentials = true;
+    return params;
+}, (error) => {
+    return Promise.reject(error);
 });
 
-const addAxiosInterceptors = ({
-  onSignOut,
-}) => {
-  axios.interceptors.response.use(
-    (response) => response.data,
-    // TODO when auth service is ready to handle token invalidation adjust this code, adjust error handling there to not block other api errors like it does now
-    // (error) => {
-    //   if (error.response.data
-    //     .some(beError => beError?.code === 'INVALID_TOKEN')
-    //   ) {
-    //     onSignOut();
-    //   }
-    //   throw error.response.data;
-    // }
-  );
+const addAxiosInterceptors = () => {
+    axios.interceptors.response.use(
+        (response) => response.data,
+        (error) => {
+            if (error.response && error.response.status === 401) {
+                if (window.location.pathname !== pagesURLs[defaultPage]) {
+                    window.location.href = pagesURLs[defaultPage];
+                }
+            }
+            return Promise.reject(error);
+        },
+    );
 };
 
 export {
-  addAxiosInterceptors,
+    addAxiosInterceptors,
 };
 
 export default axios;

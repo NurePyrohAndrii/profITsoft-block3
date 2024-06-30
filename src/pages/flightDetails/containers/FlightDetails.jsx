@@ -74,7 +74,6 @@ function FlightDetails() {
     useEffect(() => {
         if (!isCreating) {
             dispatch(actionsFlightDetails.fetchFlightDetails(id));
-            console.log('fetching flight details')
         } else {
             setState(prevState => ({
                     ...prevState,
@@ -111,8 +110,6 @@ function FlightDetails() {
             externalErrorMessages: messages,
         }));
     }, [errors]);
-
-    console.log(processedFlight)
 
     const handleServicesChange = (event) => {
         const {target: {value}} = event;

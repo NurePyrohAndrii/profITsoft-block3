@@ -15,5 +15,6 @@
   "arrivalTimeHelperText": "Enter arrival time",
   "editSuccessText": "Flight details updated successfully",
   "editFailureText": "Flight details update failed",
-  "createSuccessText": "Flight added successfully"
+  "createSuccessText": "Flight added successfully",
+  "fetchError": "Error fetching data"
 }

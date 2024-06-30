@@ -23,12 +23,6 @@ const getClasses = createUseStyles((theme) => ({
 const menuItems = [
     {
         icon: <IconLockOpen/>,
-        link: `${pagesURLs[pages.secretPage]}`,
-        neededAuthorities: [authorities.ENABLE_SEE_SECRET_PAGE],
-        titleIntlId: `page.${pages.secretPage}`,
-    },
-    {
-        icon: <IconLockOpen/>,
         link: `${pagesURLs[pages.flights]}`,
         neededAuthorities: [authorities.ENABLE_SEE_SECRET_PAGE],
         titleIntlId: `page.${pages.flights}`,

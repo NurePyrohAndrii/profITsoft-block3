@@ -15,5 +15,6 @@
   "arrivalTimeHelperText": "Введіть час прибуття",
   "editSuccessText": "Рейс успішно збережено",
   "editFailureText": "Помилка при редагуванні рейсу",
-  "createSuccessText": "Рейс успішно створено"
+  "createSuccessText": "Рейс успішно створено",
+  "fetchError": "Помилка при завантаженні даних"
 }
