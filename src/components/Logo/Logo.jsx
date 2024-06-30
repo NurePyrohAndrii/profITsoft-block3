@@ -53,11 +53,11 @@ function Logo({
         <div className={classes.labelCompactContainer}>
           <div className={classes.labelCompactMain}>
             <strong>
-              The Game
+              Flight Star
             </strong>
           </div>
           <div className={classes.labelCompactSub}>
-            Lands of Derelict
+            Effortless Flight Management
           </div>
         </div>
       )}
